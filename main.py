@@ -6,7 +6,7 @@ filename = 'images/KimSoHyun.jpg'
 
 def threshold(t, image):
     image_tmp = np.asarray(image)
-    intensity_array = list(np.where(image_tmp<=t, 0, 255).reshape(-1))
+    intensity_array = list(np.where(image_tmp<t, 0, 255).reshape(-1))
 
     image.putdata(intensity_array)
     image.show()
