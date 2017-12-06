@@ -35,7 +35,7 @@ def otsu(image, threshold):
     sum1 = sumT - sum0
     mean0 = sum0/(w0*1.0)
     mean1 = sum1/(w1*1.0)
-    varBetween = w0/(total*1.0) * w1/(total*1.0) * (mean0-mean1)*(mean0-mean1) # formulation form http://blog.csdn.net/u011285477/article/details/52004513
+    varBetween = w0/(total*1.0) * w1/(total*1.0) * (mean0-mean1)*(mean0-mean1) # formulation form https://en.wikipedia.org/wiki/Otsu%27s_method
     # print "varBetween is:", varBetween
     return varBetween
 
@@ -54,6 +54,6 @@ def fast_ostu(image, threshold):
     mean0 = sum0 / (w0 * 1.0)
     mean1 = sum1 / (w1 * 1.0)
     varBetween = w0 / (total * 1.0) * w1 / (total * 1.0) * (mean0 - mean1) * (
-            mean0 - mean1)  # formulation form http://blog.csdn.net/u011285477/article/details/52004513
+            mean0 - mean1)  # formulation form https://en.wikipedia.org/wiki/Otsu%27s_method
     # print "varBetween is:", varBetween
     return varBetween
