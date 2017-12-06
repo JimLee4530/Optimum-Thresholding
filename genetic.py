@@ -13,8 +13,8 @@ class genetic:
         :param index: index of crossover
         """
         self.image = image
-        self.N = 4
-        self.population = np.random.randint(0, 256, 4)
+        self.N = N
+        self.population = np.random.randint(0, 256, self.N)
         self.index = index
         self.max_iteration = max_iteration
 
