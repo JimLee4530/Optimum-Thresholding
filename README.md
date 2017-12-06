@@ -5,7 +5,7 @@
 
 ## Result
 **src image:**
-()[https://github.com/JimLee4530/Optimum-Thresholding/images/KimSoHyun.jpg]
+[input](https://github.com/JimLee4530/Optimum-Thresholding/images/KimSoHyun.jpg)
 
 **output:**
-()[https://github.com/JimLee4530/Optimum-Thresholding/images/output.png]
+[ouptut](https://github.com/JimLee4530/Optimum-Thresholding/images/output.png)
