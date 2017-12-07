@@ -26,15 +26,15 @@ class genetic:
     def select(self):
         fitness = self.get_fitness()
         sum_fitness = np.sum(fitness)
-        probability = [i / (sum_fitness*1.0) for i in fitness]
+        probability = fitness / sum_fitness
         new_population = np.random.choice(self.population, self.N, True, probability)
         return new_population
 
     def crossover_base(self, a, b, index):
-        a_0 = a / pow(2, index)
-        a_1 = a - a_0
-        b_0 = b/ pow(2, index)
-        b_1 = b - b_0
+        a_1 = a % pow(2, index)
+        a_0 = a - a_1
+        b_1 = b % pow(2, index)
+        b_0 = b - b_1
         new_a = a_0+b_1
         new_b = b_0+a_1
         return new_a, new_b
@@ -47,9 +47,8 @@ class genetic:
         return new_population
 
     def mutate(self):
-        m = np.random.randint(0, 8)
-        a = pow(2, m)
-        new_population = [a^i for i in self.population]
+        m = np.random.randint(low=0, high=8, size=self.N) # random mutate for every one in population
+        new_population = self.population ^ pow(2, m)
         return new_population
 
     def get_threshold(self):
